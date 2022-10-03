@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header > nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
+    align-items: center;
+}
+.header > nav > * {
+    color: white;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+}
+nav > a {
+    transition: .5s;
+    padding: 5px 20px;
+    border-radius: 3px;
+}
+nav > a:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 0px 0px 10px white;
+}
+
+.header-logo {
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 1em;
+    margin: .5em 0em;
+}
+.header-logo > * {
+    text-align: center;
+    font-family: cursive;
+    margin: 0;
+}
+
+.material-symbols-outlined {
+    
+}
+
+@media screen and (min-width:700ox) {
+
+}
