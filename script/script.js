@@ -4,12 +4,35 @@ const menuButton = document.querySelector(".menu");
 const navBar = document.querySelector(".nav");
 
 menuButton.addEventListener('click', () => {
+
+const barOne = document.querySelector(".bar1");
+const barTwo = document.querySelector(".bar2");
+const barThree = document.querySelector(".bar3");
+
     if (navBar.classList.contains("show-nav")) {
         navBar.classList.remove("show-nav");
         navBar.classList.add("hide-nav");
+        
+        barOne.classList.remove("bar1-show");
+        barOne.classList.add("bar1-return");
+
+        barTwo.classList.remove("bar2-show");
+        barTwo.classList.add("bar2-return");
+
+        barThree.classList.remove("bar3-show");
+        barThree.classList.add("bar3-return");
     } else {
         navBar.classList.add("show-nav");
         navBar.classList.remove("hide-nav");
+
+        barOne.classList.add("bar1-show");
+        barOne.classList.remove("bar1-return");
+
+        barTwo.classList.add("bar2-show");
+        barTwo.classList.remove("bar2-return");
+
+        barThree.classList.add("bar3-show");
+        barThree.classList.remove("bar3-return");
     }
 
 })
