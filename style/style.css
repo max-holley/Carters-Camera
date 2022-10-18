@@ -329,9 +329,8 @@ footer {
     align-items: center;
 }
 .gallery > * {
-    max-width: 40%;
+    width: 40vw;
     min-width: 250px;
-    height: max-content;
     scroll-snap-align: center;
     scroll-snap-stop: always;
     margin: 0em 1em;
