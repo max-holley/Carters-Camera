@@ -10,6 +10,8 @@
     --heading-text: 600;
 
     --box-shading: 0px 0px 50px rgba(0, 0, 0, 0.39);
+
+    --border-radius: 10px;
 }
 
 
@@ -19,7 +21,13 @@ body {
     overflow-x: hidden;
     background-color: var(--bg-color-light);
     scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+body::-webkit-scrollbar {
+    display: none;
+  }
+
 h2 {
     font-family: var(--main-font);
     text-align: center;
@@ -122,7 +130,7 @@ h2 {
 @keyframes show-item {
     0% {
         opacity: 0;
-        transform: scale(0.7);
+        transform: scale(0.9);
     }
     100% {
         opacity: 1;
@@ -290,6 +298,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: black;
+    padding: 1em 0em;
 }
 .legal-footer {
     display: flex;
@@ -321,15 +330,15 @@ footer {
 .gallery {
     max-width: 100vw;
     max-height: 100vh;
-    padding: 2em;
-    overflow-x: scroll;
+    padding: 50px 20px;
+    overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     display: flex;
     align-items: center;
 }
 .gallery > * {
-    width: 40vw;
+    width: 25%;
     min-width: 250px;
     scroll-snap-align: center;
     scroll-snap-stop: always;
@@ -342,5 +351,25 @@ footer {
     color: black;
     text-align: center;
     text-decoration: none;
-    border-bottom: 2px solid black;
+    border-bottom: 1.5px solid black;
+}
+.your-photos {
+    padding: 20px 30px;
+    background-color: var(--cta-bg-color);
+    color: white;
+    text-align: center;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-family: var(--main-font);
+    border: 2px solid transparent;
+    position: relative;
+}
+.bg-image {
+    position: absolute;
+    max-width: 100%;
+    z-index: -1;
+    filter: blur(5px);
+    box-shadow: var(--box-shading);
+    top: 0px;
+    mix-blend-mode:color;
 }
