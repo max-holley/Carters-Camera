@@ -490,3 +490,24 @@ footer {
         opacity: 0;
     }
 }
+
+@media (pointer: coarse) {
+    .image-container::before {
+        content: "Click image to enlarge";
+        position: relative;
+        font-family: var(--main-font);
+        background-color: var(--header-bg-color);
+        color: white;
+        font-size: .7rem;
+        padding: .5em;
+        bottom: .4em;
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+    }
+    .image-container > img {
+        border-top-left-radius: 0px;
+    }
+    .image-container::after {
+        display: none;
+    }
+}
