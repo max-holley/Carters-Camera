@@ -83,3 +83,51 @@ const observer = new IntersectionObserver(
 items.forEach(item => {
     observer.observe(item)
 })
+
+
+const openModal = document.querySelector(".open-modal");
+const modalItem = document.querySelector(".modal-item");
+const closeModal = document.getElementById("close-modal");
+const modalContent = document.querySelector(".modal-content");
+
+const images = document.querySelectorAll(".open-modal");
+
+images.forEach(image => {
+    image.addEventListener("click", () => {
+        if(modalItem.classList.contains("show-modal")) {
+            return
+        } else {
+            modalItem.classList.add("show-modal");
+            modalItem.classList.remove("hide-modal");
+    
+            var img = document.createElement("img");
+            img.src = image.getAttribute("src");
+            img.classList.add("slide-show-image");
+            img.classList.add("popup-image");
+            modalContent.appendChild(img);
+        }
+        
+        
+    })
+})
+// openModal.addEventListener("click", () => {
+//     if(modalItem.classList.contains("show-modal")) {
+//         return
+//     } else {
+//         modalItem.classList.add("show-modal");
+//         modalItem.classList.remove("hide-modal");
+
+//         var img = document.createElement("img");
+//         img.src = openModal.getAttribute("src");
+//         img.classList.add("slide-show-image");
+//         modalContent.appendChild(img);
+//     }
+    
+    
+// })
+closeModal.addEventListener("click", () => {
+    modalItem.classList.remove("show-modal");
+    modalItem.classList.add("hide-modal");
+    let popupImage = document.querySelector(".popup-image");
+    modalContent.removeChild(popupImage);
+})

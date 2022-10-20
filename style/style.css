@@ -192,9 +192,9 @@ h2 {
 }
 
 .bar2-show {
-    animation: fade-out .4s both;
+    animation: shrink .4s both;
 }
-@keyframes fade-out {
+@keyframes shrink {
     0% {
         width: 100%;
     }
@@ -204,9 +204,9 @@ h2 {
 }
 
 .bar2-return {
-    animation: fade-in .4s both 0.8s;
+    animation: grow .4s both 0.8s;
 }
-@keyframes fade-in {
+@keyframes grow {
     0% {
         width: 0%;
     }
@@ -366,10 +366,95 @@ footer {
 }
 .bg-image {
     position: absolute;
-    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    max-height: 100%;
     z-index: -1;
     filter: blur(5px);
     box-shadow: var(--box-shading);
+
+}
+.modal-container {
+    position: fixed;
     top: 0px;
-    mix-blend-mode:color;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.616);
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+.modal {
+    background-color: white;
+    padding: 2em;
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shading);
+    overflow-y: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    width: 60%;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.821);
+    padding: 0em 1em;
+    border-radius: var(--border-radius);
+    margin-bottom: 1em;
+}
+.modal-header > span {
+    font-size: 2em;
+    background-color: lightgray;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 50%;
+}
+.modal-header > span:hover {
+    color: grey;
+    cursor: pointer;
+}
+.modal-content {
+    max-width: 80%;
+    min-width: 300px;
+}
+
+.show-modal {
+    animation: fade-in .5s both;
+    pointer-events: all;
+}
+.hide-modal {
+    animation: fade-out .5s both;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
