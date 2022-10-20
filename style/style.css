@@ -56,6 +56,7 @@ h3, h4, h5 {
     opacity: 0;
     height: 0px;
     position: relative;
+    background-color: var(--header-bg-color);
 }
 .show-nav {
     height: 100%;
