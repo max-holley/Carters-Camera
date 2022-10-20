@@ -85,12 +85,12 @@ items.forEach(item => {
 })
 
 
-const openModal = document.querySelector(".open-modal");
+//This section opens the modal and populates it with the image that was clicked on.
 const modalItem = document.querySelector(".modal-item");
 const closeModal = document.getElementById("close-modal");
 const modalContent = document.querySelector(".modal-content");
 
-const images = document.querySelectorAll(".open-modal");
+const images = document.querySelectorAll(".open-image-modal");
 
 images.forEach(image => {
     image.addEventListener("click", () => {
@@ -105,6 +105,7 @@ images.forEach(image => {
             img.classList.add("slide-show-image");
             img.classList.add("popup-image");
             modalContent.appendChild(img);
+        
         }
         
         

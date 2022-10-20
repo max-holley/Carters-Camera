@@ -32,6 +32,9 @@ h2 {
     font-family: var(--main-font);
     text-align: center;
 }
+h3, h4, h5 {
+    font-family: var(--main-font);
+}
 
 .header {
     background-color: var(--header-bg-color);
@@ -290,6 +293,29 @@ h2 {
     position: relative;
     width: 100%;
 }
+.image-container::after {
+    content: "Click to view";
+    transition: .2s;
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.637);
+    color: white;
+    font-family: var(--main-font);
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+}
+.image-container:hover::after {
+    opacity: 1;
+    font-size: 1.5rem;
+}
 p {
     font-family: var(--main-font);
 }
@@ -363,6 +389,10 @@ footer {
     font-family: var(--main-font);
     border: 2px solid transparent;
     position: relative;
+    transition: .2s;
+}
+.your-photos:hover {
+    background-color: #4c5100d6;
 }
 .bg-image {
     position: absolute;
@@ -405,14 +435,13 @@ footer {
 }
 .modal-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
     position: sticky;
     top: 0px;
     width: 60%;
     min-width: 300px;
-    background-color: rgba(255, 255, 255, 0.821);
-    padding: 0em 1em;
+    padding: .5em 1em;
     border-radius: var(--border-radius);
     margin-bottom: 1em;
 }
@@ -440,6 +469,9 @@ footer {
 }
 .hide-modal {
     animation: fade-out .5s both;
+}
+.open-image-modal:hover {
+    cursor: pointer;
 }
 
 @keyframes fade-in {
