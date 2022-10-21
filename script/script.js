@@ -6,35 +6,6 @@ const barOne = document.querySelector(".bar1");
 const barTwo = document.querySelector(".bar2");
 const barThree = document.querySelector(".bar3");
 
-// menuButton.addEventListener('mouseout', () => {
-
-//         navBar.classList.remove("show-nav");
-//         navBar.classList.add("hide-nav");
-        
-//         barOne.classList.remove("bar1-show");
-//         barOne.classList.add("bar1-return");
-
-//         barTwo.classList.remove("bar2-show");
-//         barTwo.classList.add("bar2-return");
-
-//         barThree.classList.remove("bar3-show");
-//         barThree.classList.add("bar3-return");
-// })
-//     menuButton.addEventListener('mouseover', () => {
-//         navBar.classList.add("show-nav");
-//         navBar.classList.remove("hide-nav");
-
-//         barOne.classList.add("bar1-show");
-//         barOne.classList.remove("bar1-return");
-
-//         barTwo.classList.add("bar2-show");
-//         barTwo.classList.remove("bar2-return");
-
-//         barThree.classList.add("bar3-show");
-//         barThree.classList.remove("bar3-return");
-//     })
-
-
 menuButton.addEventListener('click', () => {
     
         if (navBar.classList.contains("show-nav")) {
@@ -65,9 +36,62 @@ menuButton.addEventListener('click', () => {
     
     })
 
+//This section opens the modal and populates it with the image that was clicked on.
+const modalContainer = document.querySelector(".modal-container");
+const modal = document.querySelector(".modal");
+const closeModal = document.getElementById("close-modal");
+const modalContent = document.querySelector(".modal-content");
 
+const images = document.querySelectorAll(".open-image-modal");
+
+images.forEach(image => {
+    image.addEventListener("click", () => {
+        if(modalContainer.classList.contains("show-modal-bg")) {
+            return
+        } else {
+            modalContainer.classList.add("show-modal-bg");
+            modalContainer.classList.remove("hide-modal-bg");
+            modal.classList.add("show-modal");
+            modal.classList.remove("hide-modal");
+    
+            var img = document.createElement("img");
+            img.src = image.getAttribute("src");
+            img.classList.add("slide-show-image");
+            img.classList.add("popup-image");
+            modalContent.appendChild(img);
+        
+        }
+        
+        
+    })
+})
+
+closeModal.addEventListener("click", () => {
+    modalContainer.classList.remove("show-modal-bg");
+    modalContainer.classList.add("hide-modal-bg");
+    modal.classList.remove("show-modal");
+    modal.classList.add("hide-modal");
+
+    let popupImage = document.querySelector(".popup-image");
+    setTimeout(() => {
+        modalContent.removeChild(popupImage)
+    },1000);
+   
+})
+
+//Gets all of my gallery itens and applies a class to each
+const gallery = document.querySelector(".gallery-grid");
+console.log(gallery);
+if(gallery !== null) {
+    let galleryItems = gallery.getElementsByTagName("*");
+    for(let i = 1; i < galleryItems.length; i++) {
+        galleryItems[i].classList.add("item");
+    }
+}
+
+
+//Intersection observer fades items in as you scroll through the page.
 const items = document.querySelectorAll(".item");
-
 const observer = new IntersectionObserver(
     entries => {
         entries.forEach(entry => {
@@ -82,53 +106,4 @@ const observer = new IntersectionObserver(
 
 items.forEach(item => {
     observer.observe(item)
-})
-
-
-//This section opens the modal and populates it with the image that was clicked on.
-const modalItem = document.querySelector(".modal-item");
-const closeModal = document.getElementById("close-modal");
-const modalContent = document.querySelector(".modal-content");
-
-const images = document.querySelectorAll(".open-image-modal");
-
-images.forEach(image => {
-    image.addEventListener("click", () => {
-        if(modalItem.classList.contains("show-modal")) {
-            return
-        } else {
-            modalItem.classList.add("show-modal");
-            modalItem.classList.remove("hide-modal");
-    
-            var img = document.createElement("img");
-            img.src = image.getAttribute("src");
-            img.classList.add("slide-show-image");
-            img.classList.add("popup-image");
-            modalContent.appendChild(img);
-        
-        }
-        
-        
-    })
-})
-// openModal.addEventListener("click", () => {
-//     if(modalItem.classList.contains("show-modal")) {
-//         return
-//     } else {
-//         modalItem.classList.add("show-modal");
-//         modalItem.classList.remove("hide-modal");
-
-//         var img = document.createElement("img");
-//         img.src = openModal.getAttribute("src");
-//         img.classList.add("slide-show-image");
-//         modalContent.appendChild(img);
-//     }
-    
-    
-// })
-closeModal.addEventListener("click", () => {
-    modalItem.classList.remove("show-modal");
-    modalItem.classList.add("hide-modal");
-    let popupImage = document.querySelector(".popup-image");
-    modalContent.removeChild(popupImage);
 })
