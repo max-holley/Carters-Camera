@@ -1,5 +1,3 @@
-console.log("hello there");
-
 const menuButton = document.querySelector(".menu");
 const navBar = document.querySelector(".nav");
 const barOne = document.querySelector(".bar1");
@@ -80,13 +78,16 @@ closeModal.addEventListener("click", () => {
 })
 
 //Gets all of my gallery itens and applies a class to each
-const gallery = document.querySelector(".gallery-grid");
-console.log(gallery);
-if(gallery !== null) {
-    let galleryItems = gallery.getElementsByTagName("*");
-    for(let i = 1; i < galleryItems.length; i++) {
-        galleryItems[i].classList.add("item");
-    }
+const gallerys = document.querySelectorAll(".gallery-grid");
+
+//If statement prevents errors if a gallery-grid item isn't on the page.
+if(gallerys !== null) {
+    gallerys.forEach(gallery => {
+        let galleryItems = gallery.getElementsByTagName("*");
+        for(let i = 1; i < galleryItems.length; i++) {
+            galleryItems[i].classList.add("item");
+        }
+    })
 }
 
 
@@ -103,7 +104,6 @@ const observer = new IntersectionObserver(
         threshold: 0.2
     }
 )
-
 items.forEach(item => {
     observer.observe(item)
 })

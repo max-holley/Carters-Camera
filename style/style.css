@@ -531,10 +531,10 @@ footer {
     gap: .5em;
 }
 .gallery-grid > * {
-    max-width: 30%;
-    min-width: 300px;
-    height: min-content;
+    max-width: 10%;
+    min-width: 100px;
     border-radius: var(--border-radius);
+    object-fit: cover;
 }
 
 @media (pointer: coarse) {
