@@ -550,7 +550,7 @@ footer {
 }
 textarea, input, label, select, option {
     font-family: var(--main-font);
-    padding: .2em;
+    padding: .5em;
     font-size: 1rem;
 }
 textarea, input, select, option {
