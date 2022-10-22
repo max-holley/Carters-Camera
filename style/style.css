@@ -540,7 +540,8 @@ footer {
 .contact-form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    max-width: 100%;
 }
 .contact-form > * {
     display: flex;
@@ -564,7 +565,7 @@ textarea, input, select, option {
     color: white;
     font-weight: var(--heading-text);
     border: 2px solid black;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .submit-button:hover {
     background-color: #626901;
