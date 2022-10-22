@@ -553,6 +553,9 @@ textarea, input, label, select, option {
     padding: .2em;
     font-size: 1rem;
 }
+textarea, input, select, option {
+    border-radius: var(--border-radius);
+}
 .submit-button {
     font-family: var(--main-font);
     padding: .5em;
@@ -565,6 +568,15 @@ textarea, input, label, select, option {
 }
 .submit-button:hover {
     background-color: #626901;
+    cursor: pointer;
+}
+#more-detail {
+    text-decoration: underline;
+    font-size: .8rem;
+    display: none;
+    text-align: right;
+}
+#more-detail:hover {
     cursor: pointer;
 }
 

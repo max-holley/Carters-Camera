@@ -97,10 +97,20 @@ function sliderChange(val) {
 function locationChange(locVal) {
     if (locVal === "other") {
         document.getElementById("location-other-detail").style.display = "block";
+        document.getElementById("more-detail").style.display = "block";
+        let moreDetail = document.getElementById("more-detail");
+        moreDetail.addEventListener('click', () => {
+            document.getElementById("location-ellaborate").style.display = "block";
+            document.getElementById("location-other-detail").style.display = "none";
+            moreDetail.style.display = "none";
+    })
     } else {
         document.getElementById("location-other-detail").style.display = "none";
+        document.getElementById("location-ellaborate").style.display = "none";
+        document.getElementById("more-detail").style.display = "none";
     }
 }
+
 
 function typeChange(typeVal) {
     if (typeVal === "Wedding") {

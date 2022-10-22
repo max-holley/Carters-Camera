@@ -50,7 +50,7 @@
                 <input type="email" placeholder="Email...">
             </label>
             <label>Phone
-                <input type="phone" placeholder="0123456789...">
+                <input type="phone" value="+44">
             </label>
             <label id="type">
                 Type of shoot
@@ -67,7 +67,7 @@
                 <input type="range" min="0" max="200" step="10" oninput="sliderChange(this.value)">
                 <p id="sliderVal">100</p>
             </label>
-            <label id="location">
+            <label id="location" style="display: none;">
                 Where would you like this to take place
                 <select name="" id="location-selection" oninput="locationChange(this.value)">
                     <option value="home">At Home</option>
@@ -77,6 +77,8 @@
                     <option value="other">Some other place...</option>
                 </select>
                 <input type="text" id="location-other-detail" style="display: none; margin-top: .5em;" placeholder="Please provide details...">
+                <textarea cols="30" rows="10" placeholder="Please ellaborate" id="location-ellaborate" style="display: none; margin-top: .5em;"></textarea>
+                <p id="more-detail">I want to provide more detail</p>
             </label>
             <label id="description">Description
                 <textarea name="" id="" cols="30" rows="10" placeholder="Description..."></textarea>
