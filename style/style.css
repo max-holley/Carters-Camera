@@ -537,6 +537,32 @@ footer {
     object-fit: cover;
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.contact-form > * {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    width: 100%;
+}
+textarea, input, label, select, option {
+    font-family: var(--main-font);
+    padding: .2em;
+}
+.submit-button {
+    font-family: var(--main-font);
+    padding: .5em;
+    text-align: center;
+    background-color: #4b5100;
+    border-radius: var(--border-radius);
+    color: white;
+    font-weight: var(--heading-text);
+
+}
+
 @media (pointer: coarse) {
     .image-container::before {
         content: "Click image to enlarge";

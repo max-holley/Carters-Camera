@@ -90,6 +90,28 @@ if(gallerys !== null) {
     })
 }
 
+function sliderChange(val) {
+    document.getElementById('sliderVal').innerHTML = val;
+    }
+
+function locationChange(locVal) {
+    if (locVal === "other") {
+        document.getElementById("location-other-detail").style.display = "block";
+    } else {
+        document.getElementById("location-other-detail").style.display = "none";
+    }
+}
+
+function typeChange(typeVal) {
+    if (typeVal === "Wedding") {
+        document.getElementById("guests").style.display = "flex";
+        document.getElementById("location").style.display = "none";
+
+    } else {
+        document.getElementById("guests").style.display = "none";
+        document.getElementById("location").style.display = "flex";
+    }
+}
 
 //Intersection observer fades items in as you scroll through the page.
 const items = document.querySelectorAll(".item");
