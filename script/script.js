@@ -113,7 +113,10 @@ function locationChange(locVal) {
 
 
 function typeChange(typeVal) {
-    if (typeVal === "Wedding") {
+    if (typeVal === "please-select") {
+        document.getElementById("guests").style.display = "none";
+        document.getElementById("location").style.display = "none";
+    } else if (typeVal === "Wedding") {
         document.getElementById("guests").style.display = "flex";
         document.getElementById("location").style.display = "none";
 

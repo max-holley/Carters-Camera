@@ -55,14 +55,16 @@
             <label id="type">
                 Type of shoot
                 <select name="" id="type-selector" oninput="typeChange(this.value)">
+                    <option value="please-select">Please choose...</option>
                     <option value="Wedding">Wedding</option>
                     <option value="Personal">Personal</option>
                     <option value="Pet">Pet</option>
                     <option value="Baby">Baby</option>
                     <option value="Business">Business</option>
+                    <option value="other">Other</option>
                 </select>
             </label>
-            <label id="guests">
+            <label id="guests" style="display: none;">
                 Roughly how many guests are you expecting
                 <input type="range" min="0" max="200" step="10" oninput="sliderChange(this.value)">
                 <p id="sliderVal">100</p>

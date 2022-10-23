@@ -555,7 +555,12 @@ textarea, input, label, select, option {
     font-size: 1rem;
 }
 textarea, input, select, option {
+    background-color: white;
+    border: 2px solid black;
     border-radius: var(--border-radius);
+}
+textarea {
+    resize: none;
 }
 .submit-button {
     font-family: var(--main-font);
@@ -579,6 +584,11 @@ textarea, input, select, option {
 }
 #more-detail:hover {
     cursor: pointer;
+}
+#sliderVal {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
 }
 
 @media (pointer: coarse) {
