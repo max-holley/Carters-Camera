@@ -591,6 +591,34 @@ textarea {
     font-weight: bold;
 }
 
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 25px;
+    background: var(--header-bg-color);
+    outline: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 1em;
+    border-radius: 2em;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background-image: url("../images/Carters Camera Logo White.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.478);
+    position: relative;
+}
+
 @media (pointer: coarse) {
     .image-container::before {
         content: "Click image to enlarge";
