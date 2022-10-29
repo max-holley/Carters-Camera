@@ -16,6 +16,9 @@
     --border-radius: 10px;
 }
 
+html {
+    background-color: var(--header-bg-color);
+}
 
 body {
     margin: 0;
@@ -30,12 +33,25 @@ body::-webkit-scrollbar {
     display: none;
   }
 
-h2 {
-    font-family: var(--main-font);
-    text-align: center;
+#business, #wedding, #personal {
+    scroll-margin-top: 100px;
 }
+.title {
+    margin-bottom: 20px;
+}
+a {
+    color: grey;
+}
+
+
 h1, h2, h3, h4, h5 {
     font-family: var(--heading-font);
+}
+p, a, li {
+    font-family: var(--main-font);
+}
+li {
+    margin: 15px 0px;
 }
 
 
@@ -320,9 +336,7 @@ h1, h2, h3, h4, h5 {
     opacity: 1;
     font-size: 1.5rem;
 }
-p {
-    font-family: var(--main-font);
-}
+
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -600,7 +614,7 @@ textarea {
         color: white;
         font-size: .7rem;
         padding: .5em;
-        bottom: .4em;
+        bottom: 3px;
         border-top-left-radius: var(--border-radius);
         border-top-right-radius: var(--border-radius);
     }
