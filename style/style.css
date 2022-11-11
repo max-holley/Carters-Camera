@@ -604,6 +604,35 @@ textarea {
     text-align: center;
     font-weight: bold;
 }
+.guests {
+    padding: 0;
+}
+.slider {
+    height: 30px;
+    padding: 0;
+    margin: 5px 0px 0px 0px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--header-bg-color);
+    border-radius: 3em;
+    max-width: 100%;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 30px;
+    width: 30px;
+    background-image: url("../images/Carters\ Camera\ Logo\ White.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid white;
+    box-shadow: inset 0px 0px 5px white;
+    border-radius: 50%;
+}
+.slider::-webkit-slider-thumb:hover {
+    cursor: pointer;
+}
 
 @media (pointer: coarse) {
     .image-container::before {
