@@ -438,7 +438,7 @@ footer {
 }
 .modal {
     background-color: white;
-    padding: 2em;
+    padding: 1em;
     max-width: 80vw;
     max-height: 80vh;
     border-radius: var(--border-radius);
@@ -457,7 +457,7 @@ footer {
     align-items: center;
     position: sticky;
     top: 0px;
-    width: 60%;
+    width: 90%;
     min-width: 300px;
     padding: .5em 1em;
     border-radius: var(--border-radius);
@@ -477,7 +477,7 @@ footer {
     cursor: pointer;
 }
 .modal-content {
-    max-width: 80%;
+    max-width: 90%;
     min-width: 300px;
 }
 
@@ -545,10 +545,11 @@ footer {
     gap: .5em;
 }
 .gallery-grid > * {
-    max-width: 10%;
+    max-width: 25%;
     min-width: 100px;
     border-radius: var(--border-radius);
     object-fit: cover;
+    box-shadow: var(--box-shading);
 }
 
 .contact-form {
@@ -632,6 +633,10 @@ textarea {
 }
 .slider::-webkit-slider-thumb:hover {
     cursor: pointer;
+}
+.long-text {
+    word-wrap: normal;
+    height: 5em;
 }
 
 @media (pointer: coarse) {
