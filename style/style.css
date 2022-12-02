@@ -307,7 +307,8 @@ li {
 }
 .logo {
     width: 100px;
-
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shading);
 }
 .image-container {
     position: relative;
