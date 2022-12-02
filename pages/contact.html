@@ -53,7 +53,7 @@
             </label>
             <label id="type">
                 Type of shoot
-                <select name="" id="type-selector" oninput="typeChange(this.value)" name="Event Type">
+                <select name="Type Of Shoot" id="type-selector" oninput="typeChange(this.value)" name="Event Type">
                     <option value="please-select">Please choose...</option>
                     <option value="Wedding">Wedding</option>
                     <option value="Personal">Personal</option>
@@ -70,15 +70,15 @@
             </label>
             <label id="location" style="display: none;">
                 Where would you like this to take place
-                <select name="" id="location-selection" oninput="locationChange(this.value)" name="Location">
+                <select name="Location" id="location-selection" oninput="locationChange(this.value)" name="Location">
                     <option value="home">At Home</option>
                     <option value="workplace">At Work</option>
                     <option value="park">At a Park</option>
                     <option value="forest">At a Forest / Woodland</option>
                     <option value="other">Some other place...</option>
                 </select>
-                <input type="text" id="location-other-detail" style="display: none; margin-top: .5em;" placeholder="Please provide details..." name="More details">
-                <textarea cols="30" rows="10" placeholder="Please ellaborate" id="location-ellaborate" style="display: none; margin-top: .5em;"></textarea>
+                <input type="text" name="Location Detail" id="location-other-detail" style="display: none; margin-top: .5em;" placeholder="Please provide details..." name="More details">
+                <textarea cols="30" name="Location Detial More" rows="10" placeholder="Please ellaborate" id="location-ellaborate" style="display: none; margin-top: .5em;"></textarea>
                 <p id="more-detail">I want to provide more detail</p>
             </label>
             <label id="description">Description
