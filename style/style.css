@@ -25,6 +25,10 @@ body {
     padding: 0;
     overflow-x: hidden;
     background-color: var(--bg-color-light);
+    background-image: url("../images/Leaf.svg");
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: repeat;
     scroll-behavior: smooth;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -279,6 +283,7 @@ li {
 .section > * {
     max-width: 40%;
     min-width: 300px;
+    border-radius: var(--border-radius);
 }
 .flex-direction-reverse {
     flex-direction: row-reverse;
