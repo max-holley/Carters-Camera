@@ -142,3 +142,10 @@ const observer = new IntersectionObserver(
 items.forEach(item => {
     observer.observe(item)
 })
+
+
+const logo = document.querySelector(".logo");
+
+logo.addEventListener('click', () => {
+    window.location.href = "../index.html";
+})

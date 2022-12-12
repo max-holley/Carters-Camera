@@ -4,7 +4,7 @@
     --bg-color-light: #fefee9;
 
     --main-font: 'Poppins', sans-serif;
-    --heading-font: 'Times New Roman', Times, serif;
+    --heading-font: 'Quintessential', cursive;;
 
     --light-text: 200;
     --medium-text: 300;
@@ -50,7 +50,6 @@ a {
 
 h1, h2, h3, h4, h5 {
     font-family: var(--heading-font);
-    font-style: italic;
 }
 p, a, li {
     font-family: var(--main-font);
@@ -315,6 +314,9 @@ li {
     width: 100px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shading);
+}
+.logo:hover {
+    cursor: pointer;
 }
 .image-container {
     position: relative;
