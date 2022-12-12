@@ -4,7 +4,7 @@
     --bg-color-light: #fefee9;
 
     --main-font: 'Poppins', sans-serif;
-    --heading-font: Cursive;
+    --heading-font: 'Times New Roman', Times, serif;
 
     --light-text: 200;
     --medium-text: 300;
@@ -28,7 +28,7 @@ body {
     background-image: url("../images/Leaf.svg");
     background-size:cover;
     background-attachment: fixed;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     scroll-behavior: smooth;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -50,6 +50,7 @@ a {
 
 h1, h2, h3, h4, h5 {
     font-family: var(--heading-font);
+    font-style: italic;
 }
 p, a, li {
     font-family: var(--main-font);
