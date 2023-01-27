@@ -144,8 +144,14 @@ items.forEach(item => {
 })
 
 
-const logo = document.querySelector(".logo");
+// const logo = document.querySelector(".logo");
 
-logo.addEventListener('click', () => {
-    window.location.href = "/cartersacamera/index.html";
+// logo.addEventListener('click', () => {
+//     window.location.href = "/cartersacamera/index.html";
+// })
+
+const submitButton = document.querySelector('.submit-button');
+const loader = document.querySelector('.loader-container');
+submitButton.addEventListener('click', () => {
+    loader.style.display = "flex";
 })
