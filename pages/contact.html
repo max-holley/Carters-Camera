@@ -45,7 +45,9 @@
         <p>Have any questions or want to enquire about my services? Please use the form below and I'll get back to you as soon as I can.</p>
     </div>
     <div class="section">
-        <form action="https://getform.io/f/a5f89913-5599-4c31-b24f-a035d8e947bd" method="POST" class="contact-form">
+        <form action="https://formsubmit.co/maxholley022@gmail.com" method="POST" class="contact-form">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/pages/thankyou.html">
+            <input type="hidden" name="_captcha" value="false">
             <label>Name
                 <input type="text" placeholder="Name..." name="Name">
             </label>
@@ -58,7 +60,7 @@
             <label id="type">
                 Type of shoot
                 <select name="Type Of Shoot" id="type-selector" oninput="typeChange(this.value)" name="Event Type">
-                    <option value="please-select">Please choose...</option>
+                    <option value="please-select">Please select...</option>
                     <option value="Wedding">Wedding</option>
                     <option value="Personal">Personal</option>
                     <option value="Pet">Pet</option>
@@ -75,6 +77,7 @@
             <label id="location" style="display: none;">
                 Where would you like this to take place
                 <select name="Location" id="location-selection" oninput="locationChange(this.value)" name="Location">
+                    <option value="none">Please select...</option>
                     <option value="home">At Home</option>
                     <option value="workplace">At Work</option>
                     <option value="park">At a Park</option>
