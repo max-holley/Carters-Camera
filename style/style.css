@@ -1,7 +1,7 @@
 :root {
     --header-bg-color: #281f00;
     --cta-bg-color: #4b5100;
-    --bg-color-light: #fefee9;
+    --bg-color-light: white;
 
     --main-font: 'Poppins', sans-serif;
     --heading-font: 'Quintessential', cursive;;
@@ -42,6 +42,7 @@ body::-webkit-scrollbar {
 }
 .title {
     margin-bottom: 20px;
+    z-index: 20;
 }
 a {
     color: grey;
@@ -68,7 +69,7 @@ li {
     top: 0px;
     left: 0px;
     box-shadow: 0px 0px 20px black;
-    z-index: 10;
+    z-index: 20;
     overflow: hidden;
 
 }
@@ -754,7 +755,46 @@ textarea {
       transform: scale(1.5);
     }
   }
+
+  .section-2 {
+    background-color:rgba(134, 145, 127, 0.364);
+  }
+
+  .front {
+    z-index: 10 !important;
+  }
+  .svg-container {
+    position: relative;
+  }
   
+  .svg {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .svg-2 {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    bottom: 0px;
+    pointer-events: none;
+  }
+  .svg-3 {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    bottom: 0px;
+    pointer-events: all;
+    object-fit: scale-down;
+    pointer-events: none;
+  }
+  .svg-bg {
+    background-image: url("../images/blob-scene-haikei.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
 
 
