@@ -14,7 +14,7 @@
 
     --box-shading: 0px 0px 50px rgba(0, 0, 0, 0.39);
 
-    --border-radius: 10px;
+    --border-radius: 7px;
 }
 
 html {
@@ -301,7 +301,7 @@ li {
 .slide-show-image {
     box-shadow: var(--box-shading);
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 .radius-image {
@@ -406,7 +406,7 @@ footer {
     scroll-snap-align: center;
     scroll-snap-stop: always;
     margin: 0em 1em;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     box-shadow: var(--box-shading);
 }
 .gallery-link {
