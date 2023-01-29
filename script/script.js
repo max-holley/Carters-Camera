@@ -155,3 +155,18 @@ const loader = document.querySelector('.loader-container');
 submitButton.addEventListener('click', () => {
     loader.style.display = "flex";
 })
+
+const checkbox = document.querySelector('.checkbox');
+checkbox.addEventListener('click', () => {
+    if(checkbox.checked) {
+        submitButton.style.pointerEvents = "all";
+        submitButton.style.backgroundColor = "#4b5100";
+        submitButton.style.opacity = "1";
+    } else {
+        submitButton.style.pointerEvents = "none";
+        submitButton.style.backgroundColor = "#72736b";
+        submitButton.style.opacity = "0.2";
+    }
+
+
+})

@@ -600,12 +600,14 @@ textarea {
 .submit-button {
     font-family: var(--main-font);
     padding: .5em;
-    background-color: #4b5100;
+    background-color: #72736b;
     border-radius: var(--border-radius);
     color: white;
     font-weight: var(--heading-text);
     border: 2px solid black;
     font-size: 1.5rem;
+    pointer-events: none;
+    opacity: 0.2;
 }
 .submit-button:hover {
     background-color: #626901;
@@ -670,7 +672,7 @@ textarea {
     width:100vw;
     top:0px;
     left:0px;
-    pointer-events: none;
+    pointer-events: all;
     z-index:50;
 }
 
@@ -795,6 +797,15 @@ textarea {
     background-image: url("../images/blob-scene-haikei.svg");
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .terms-checkbox {
+    display: flex;
+  }
+  .checkbox {
+    margin-top: 10px;
+    transform: scale(1.2);
+    border-radius: 50%;
   }
 
 
