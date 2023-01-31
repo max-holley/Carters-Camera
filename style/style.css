@@ -849,8 +849,7 @@ textarea {
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    filter: blur(5px);
-    box-shadow: inset 0px 0px 20px black;
+    filter: brightness(0.8);
   }
 
   .bg {
@@ -870,7 +869,6 @@ textarea {
     z-index: 0;
     padding: 0px;
     overflow: hidden;
-    box-shadow: inset 0px 0px 20px black;
   }
   .bg > * {
     text-decoration: none;
