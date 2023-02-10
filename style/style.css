@@ -205,8 +205,19 @@ li {
 }
 @keyframes bar1-show {
     0% {
+        width: 100%;
         transform: rotate(0deg);
         top: 0px;
+    }
+    35% {
+        width:2px;
+        transform: rotate(0deg);
+        top: 7.5px;
+    }
+    65% {
+        width: 2px;
+        transform: rotate(45deg);
+        top: 7.5px;
     }
     100% {
         transform: rotate(45deg);
@@ -218,10 +229,22 @@ li {
 }
 @keyframes bar1-return {
     0% {
+        width: 100%;
         transform: rotate(45deg);
         top: 7.5px;
     }
+    35% {
+        width: 2px;
+        transform: rotate(45deg);
+        top: 7.5px;
+    }
+    65% {
+        width: 2px;
+        transform: rotate(0deg);
+        top: 7.5px;
+    }
     100% {
+        width: 100%;
         transform: rotate(0deg);
         top: 0px;
     }
@@ -256,10 +279,22 @@ li {
 }
 @keyframes bar3-show {
     0% {
+        width: 100%;
         transform: rotate(0deg);
         bottom: 0px;
     }
+    35% {
+        width: 2px;
+        transform: rotate(0deg);
+        bottom: 7.5px;
+    }
+    65% {
+        width: 2px;
+        transform: rotate(-45deg);
+        bottom: 7.5px;
+    }
     100% {
+        width: 100%;
         transform: rotate(-45deg);
         bottom: 7.5px;
     }
@@ -270,10 +305,22 @@ li {
 }
 @keyframes bar3-return {
     0% {
+        width: 100%;
         transform: rotate(-45deg);
         bottom: 7.5px;
     }
+    35% {
+        width: 2px;
+        transform: rotate(-45deg);
+        bottom: 7.5px;
+    }
+    65% {
+        width: 2px;
+        transform: rotate(0deg);
+        bottom: 7.5px;
+    }
     100% {
+        width: 100%;
         transform: rotate(0deg);
         bottom: 0px;
     }
