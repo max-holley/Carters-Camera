@@ -201,7 +201,7 @@ li {
 }
 
 .bar1-show {
-    animation: bar1-show .5s both 0.3s;
+    animation: bar1-show .5s both 0.2s;
 }
 @keyframes bar1-show {
     0% {
@@ -258,16 +258,16 @@ li {
         width: 100%;
     }
     100% {
-        width: 0%;
+        width: 2px;
     }
 }
 
 .bar2-return {
-    animation: grow .2s both 0.8s;
+    animation: grow .2s both 0.5s;
 }
 @keyframes grow {
     0% {
-        width: 0%;
+        width: 2px;
     }
     100% {
         width: 100%;
@@ -275,7 +275,7 @@ li {
 }
 
 .bar3-show {
-    animation: bar3-show .5s both 0.3s;
+    animation: bar3-show .5s both 0.2s;
 }
 @keyframes bar3-show {
     0% {
@@ -808,7 +808,7 @@ textarea {
   }
 
   .section-2 {
-    background-color:rgba(134, 145, 127, 0.364);
+    background-color:#C6C6C6;
   }
 
   .front {
