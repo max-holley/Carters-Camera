@@ -49,6 +49,9 @@ a {
     color: grey;
 }
 
+h1 {
+    text-align: center;
+}
 
 h1, h2, h3, h4, h5 {
     font-family: var(--heading-font);
@@ -446,7 +449,7 @@ footer {
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 .gallery > * {
     width: 25%;
@@ -846,6 +849,11 @@ textarea {
     background-size: cover;
     background-repeat: no-repeat;
   }
+  .svg-bg-2 {
+    background-image: url("../images/wave-haikei (2).svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
   .terms-checkbox {
     display: flex;
@@ -974,6 +982,21 @@ textarea {
   .text > * {
     color: black;
     z-index: 11;
+  }
+
+  .testimonial {
+    /* background-color: #ffffffcf; */
+    border-radius: 2em;
+    padding: 2em;
+    box-shadow: var(--box-shading);
+  }
+  .testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .testimonial-header > p {
+    color: rgb(86, 86, 86);
   }
 
 
