@@ -999,6 +999,19 @@ textarea {
     color: rgb(86, 86, 86);
   }
 
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .links > :last-child {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.229);
+    text-align: center;
+    padding: 1rem 0rem;
+    border-radius: var(--border-radius);
+  }
+
 
 @media (pointer: coarse) {
     .image-container::before {
